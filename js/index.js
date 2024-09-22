@@ -9,13 +9,13 @@ const donationBtn = document.getElementById('donation-btn').addEventListener('cl
     const total = document.getElementById('total-donate');
     // console.log(total)
 
-    total.innerText = totalDonateAmount;
+    total.innerText = totalDonateAmount.toFixed(2);
 
     const myAmount = parseFloat(document.getElementById('my-amount').innerText);
     const remaining = myAmount - donationAmount;
 
     const balance = document.getElementById('my-amount');
-    balance.innerText = remaining;
+    balance.innerText = remaining.toFixed(2);
 
 
     // history
@@ -25,11 +25,14 @@ const donationBtn = document.getElementById('donation-btn').addEventListener('cl
     const newElement = document.createElement('div')
     newElement.className = "p-4 shadow-md rounded-lg border-gray-600"
     newElement.innerHTML = `
-    <h2 class="font-extrabold mb-2">${donationAmount} Taka is ${title}</h2>
+    <h2 class="font-extrabold mb-2">${donationAmount.toFixed(2)} Taka is ${title}</h2>
                 <p class="text-xs text-gray-400">Date : ${new Date().toDateString()}</p>
     `
 
     historySection.appendChild(newElement)
+
+    const modal = document.getElementById('my_modal_5').showModal();
+    document.getElementById('donation-amount').value = ""
 })
 
 const donationBtn2 = document.getElementById('second-donation').addEventListener('click', function () {
@@ -39,13 +42,13 @@ const donationBtn2 = document.getElementById('second-donation').addEventListener
     // console.log(secondDonateAmount)
     const total = secondDonateAmount + secondInput;
     const totalDonate = document.getElementById('second-total');
-    totalDonate.innerText = total;
+    totalDonate.innerText = total.toFixed(2);
 
     const myAmount = parseFloat(document.getElementById('my-amount').innerText);
     const remaining = myAmount - secondInput;
 
     const balance = document.getElementById('my-amount');
-    balance.innerText = remaining;
+    balance.innerText = remaining.toFixed(2);
 
     // history
     const historySection = document.getElementById('history-section');
@@ -54,11 +57,14 @@ const donationBtn2 = document.getElementById('second-donation').addEventListener
     const newElement = document.createElement('div')
     newElement.className = "p-4 shadow-md rounded-lg border-gray-600"
     newElement.innerHTML = `
-    <h2 class="font-extrabold mb-2">${secondInput} Taka is ${title}</h2>
+    <h2 class="font-extrabold mb-2">${secondInput.toFixed(2)} Taka is ${title}</h2>
                 <p class="text-xs text-gray-400">Date : ${new Date().toDateString()}</p>
     `
 
     historySection.appendChild(newElement)
+
+    const modal = document.getElementById('my_modal_5').showModal();
+    document.getElementById('second-input').value = ""
 })
 
 const donationBtn3 = document.getElementById('third-donation').addEventListener('click', function () {
@@ -68,13 +74,13 @@ const donationBtn3 = document.getElementById('third-donation').addEventListener(
     // console.log(secondDonateAmount)
     const total = secondDonateAmount + secondInput;
     const totalDonate = document.getElementById('third-total');
-    totalDonate.innerText = total;
+    totalDonate.innerText = total.toFixed(2);
 
     const myAmount = parseFloat(document.getElementById('my-amount').innerText);
     const remaining = myAmount - secondInput;
 
     const balance = document.getElementById('my-amount');
-    balance.innerText = remaining;
+    balance.innerText = remaining.toFixed(2);
 
     // history
     const historySection = document.getElementById('history-section');
@@ -83,11 +89,14 @@ const donationBtn3 = document.getElementById('third-donation').addEventListener(
     const newElement2 = document.createElement('div')
     newElement2.className = "p-4 shadow-md rounded-lg border-gray-600"
     newElement2.innerHTML = `
-    <h2 class="font-extrabold mb-2">${secondInput} Taka is ${title}</h2>
+    <h2 class="font-extrabold mb-2">${secondInput.toFixed(2)} Taka is ${title}</h2>
                 <p class="text-xs text-gray-400">Date : ${new Date().toDateString()}</p>
     `
 
     historySection.appendChild(newElement2)
+
+    const modal = document.getElementById('my_modal_5').showModal();
+    document.getElementById('third-input').value = ""
 })
 
 // history btn

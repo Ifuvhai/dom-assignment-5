@@ -1,4 +1,4 @@
-function getInputValue(id){
-    const inputValue = document.getElementById(id);
-    console.log(value)
-}
+const blogBtn =document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = '/blog.html'
+})
+
