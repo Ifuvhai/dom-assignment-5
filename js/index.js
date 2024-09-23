@@ -32,7 +32,7 @@ const donationBtn = document.getElementById('donation-btn').addEventListener('cl
         newElement.className = "p-4 shadow-md rounded-lg border-gray-600"
         newElement.innerHTML = `
         <h2 class="font-extrabold mb-2">${donationAmount.toFixed(2)} Taka is ${title}</h2>
-                    <p class="text-xs text-gray-400">Date : ${new Date().toDateString()}</p>
+                    <p class="text-xs text-gray-400">Date : ${new Date().toDateString()} Time :  ${new Date().toLocaleTimeString()}</p>
         `
     
         historySection.appendChild(newElement)
@@ -76,7 +76,7 @@ const donationBtn2 = document.getElementById('second-donation').addEventListener
     newElement.className = "p-4 shadow-md rounded-lg border-gray-600"
     newElement.innerHTML = `
     <h2 class="font-extrabold mb-2">${secondInput.toFixed(2)} Taka is ${title}</h2>
-                <p class="text-xs text-gray-400">Date : ${new Date().toDateString()}</p>
+                <p class="text-xs text-gray-400">Date : ${new Date().toDateString()} Time :  ${new Date().toLocaleTimeString()}</p>
     `
 
     historySection.appendChild(newElement)
@@ -119,7 +119,7 @@ const donationBtn3 = document.getElementById('third-donation').addEventListener(
      newElement2.className = "p-4 shadow-md rounded-lg border-gray-600"
      newElement2.innerHTML = `
      <h2 class="font-extrabold mb-2">${secondInput.toFixed(2)} Taka is ${title}</h2>
-                 <p class="text-xs text-gray-400">Date : ${new Date().toDateString()}</p>
+                 <p class="text-xs text-gray-400">Date : ${new Date().toDateString()} Time :  ${new Date().toLocaleTimeString()}</p>
      `
  
      historySection.appendChild(newElement2)
