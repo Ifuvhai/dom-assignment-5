@@ -1,3 +1,4 @@
-// document.getElementById('home-btn').addEventListener('click', function(){
-//     window.location.href = './index.html'
-// })
+document.getElementById('home-btn').addEventListener('click', function(){
+    console.log('got it')
+    window.location.href = './index.html'
+})
