@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        clifford: '#da373d',
+                        clifford: 'rgb(180, 244, 97)',
                     }
                 }
             }
@@ -23,9 +23,9 @@
 <body>
     <header class="sticky top-0">
         <nav>
-            <div class="navbar bg-gray-100">
+            <div class="navbar bg-red-50">
                 <div class="navbar-start">
-                  <button id="blog-btn" class="bg-green-400 font-bold px-3 py-1 rounded-md">Blog</button>
+                  <button id="blog-btn" class="bg-clifford font-bold px-3 py-1 rounded-md">Blog</button>
                 </div>
                 <div class="navbar-center">
                   
@@ -42,9 +42,9 @@
                 </div>
               </div>
         </nav>
-        <section class="bg-white">
+        <section class="bg-slate-100 bg-opacity-90">
             <div class="flex gap-4 justify-center pt-10 pb-5">
-                <button id="donate-button" class="border bg-green-400 text-lg font-bold py-1 px-4 rounded-md">Donate</button>
+                <button id="donate-button" class="border bg-clifford text-lg font-bold py-1 px-4 rounded-md">Donate</button>
             <button id="history-btn" class="border text-lg font-bold py-1 px-4 rounded-md">History</button>
             </div>
         </section>
@@ -71,7 +71,7 @@
                     <div class="mb-4">
                         <input  class="border-2 w-full p-2 rounded-lg" type="text" name="" id="donation-amount" placeholder="write donation amount">
                     </div>
-                    <button id="donation-btn" class="donate-btn bg-green-400 p-2 w-full rounded-lg font-bold">Donate Now</button>
+                    <button id="donation-btn" class="donate-btn bg-clifford p-2 w-full rounded-lg font-bold">Donate Now</button>
                  </div>
              </div>
              <div class="lg:flex gap-4 p-4 shadow-sm border-2 rounded-lg">
@@ -89,7 +89,7 @@
                     <div class="mb-4">
                         <input  class="border-2 w-full p-2 rounded-lg" type="text" name="" id="second-input" placeholder="write donation amount">
                     </div>
-                    <button id="second-donation" class="donate-btn bg-green-400 p-2 w-full rounded-lg font-bold">Donate Now</button>
+                    <button id="second-donation" class="donate-btn bg-clifford p-2 w-full rounded-lg font-bold">Donate Now</button>
                  </div>
              </div>
              <div class="lg:flex gap-4 p-4 shadow-sm border-2 rounded-lg ">
@@ -107,7 +107,7 @@
                     <div class="mb-4">
                         <input class="border-2 w-full p-2 rounded-lg" type="text" name="" id="third-input" placeholder="write donation amount">
                     </div>
-                    <button id="third-donation" class="donate-btn bg-green-400 p-2 w-full rounded-lg font-bold">Donate Now</button>
+                    <button id="third-donation" class="donate-btn bg-clifford p-2 w-full rounded-lg font-bold">Donate Now</button>
                  </div>
              </div>
         </section>

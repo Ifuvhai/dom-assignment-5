@@ -1,7 +1,7 @@
 const donationBtn = document.getElementById('donation-btn').addEventListener('click', function () {
 
     
-    const donationAmount = parseFloat(document.getElementById('donation-amount').value);
+    const donationAmount = getInputValue('donation-amount');
     // console.log(donationAmount)
 
 
@@ -9,7 +9,8 @@ const donationBtn = document.getElementById('donation-btn').addEventListener('cl
 
     if(!isNaN(donationAmount) && 0<donationAmount){
         
-        const donateAmount = parseFloat(document.getElementById('total-donate').innerText);
+        const donateAmount = collectionDonate('total-donate');
+        // console.log(donateAmount)
 
         const totalDonateAmount = donateAmount + donationAmount;
         // console.log(donateAmount.innerText)
@@ -18,7 +19,7 @@ const donationBtn = document.getElementById('donation-btn').addEventListener('cl
     
         total.innerText = totalDonateAmount.toFixed(2);
     
-        const myAmount = parseFloat(document.getElementById('my-amount').innerText);
+        const myAmount = collectionDonate('my-amount');
         const remaining = myAmount - donationAmount;
     
         const balance = document.getElementById('my-amount');
@@ -52,8 +53,8 @@ const donationBtn = document.getElementById('donation-btn').addEventListener('cl
 })
 
 const donationBtn2 = document.getElementById('second-donation').addEventListener('click', function () {
-    const secondInput = parseFloat(document.getElementById('second-input').value);
-    const secondDonateAmount = parseFloat(document.getElementById('second-total').innerText);
+    const secondInput = getInputValue('second-input');
+    const secondDonateAmount = collectionDonate('second-total');
 
     if(!isNaN(secondInput) && 0<secondInput){
 
@@ -61,7 +62,7 @@ const donationBtn2 = document.getElementById('second-donation').addEventListener
         const totalDonate = document.getElementById('second-total');
         totalDonate.innerText = total.toFixed(2);
     
-        const myAmount = parseFloat(document.getElementById('my-amount').innerText);
+        const myAmount = collectionDonate('my-amount');
         const remaining = myAmount - secondInput;
     
         const balance = document.getElementById('my-amount');
@@ -94,8 +95,8 @@ const donationBtn2 = document.getElementById('second-donation').addEventListener
 })
 
 const donationBtn3 = document.getElementById('third-donation').addEventListener('click', function () {
-    const secondInput = parseFloat(document.getElementById('third-input').value);
-    const secondDonateAmount = parseFloat(document.getElementById('third-total').innerText);
+    const secondInput = getInputValue('third-input');
+    const secondDonateAmount = collectionDonate('third-total');
 
     if(!isNaN(secondInput) && 0<secondInput){
 
@@ -104,7 +105,7 @@ const donationBtn3 = document.getElementById('third-donation').addEventListener(
     const totalDonate = document.getElementById('third-total');
     totalDonate.innerText = total.toFixed(2);
 
-    const myAmount = parseFloat(document.getElementById('my-amount').innerText);
+    const myAmount = collectionDonate('my-amount');
     const remaining = myAmount - secondInput;
 
     const balance = document.getElementById('my-amount');
@@ -141,10 +142,10 @@ const donationBtn3 = document.getElementById('third-donation').addEventListener(
 
 const historyBtn = document.getElementById('history-btn').addEventListener('click', function () {
     const donateButton = document.getElementById('donate-button');
-    donateButton.classList.remove('bg-green-400')
+    donateButton.classList.remove('bg-clifford')
 
     const historyButton = document.getElementById('history-btn');
-    historyButton.classList.add('bg-green-400')
+    historyButton.classList.add('bg-clifford')
 
     const cardSection = document.getElementById('cards-section');
     cardSection.classList.add('hidden')
@@ -157,10 +158,10 @@ const historyBtn = document.getElementById('history-btn').addEventListener('clic
 const donateBtn = document.getElementById('donate-button').addEventListener('click', function () {
 
     const historyButton = document.getElementById('history-btn');
-    historyButton.classList.remove('bg-green-400')
+    historyButton.classList.remove('bg-clifford')
 
     const donateButton = document.getElementById('donate-button');
-    donateButton.classList.add('bg-green-400')
+    donateButton.classList.add('bg-clifford')
 
     const cardSection = document.getElementById('cards-section');
     cardSection.classList.remove('hidden')

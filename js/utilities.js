@@ -3,4 +3,13 @@ const blogBtn =document.getElementById('blog-btn').addEventListener('click', fun
 })
 
 
+function getInputValue(id){
+   const inputValue = parseFloat(document.getElementById(id).value);
+   return inputValue;
+}
 
+function collectionDonate(id){
+    const amountDonate = parseFloat(document.getElementById(id).innerText);
+
+    return amountDonate;
+}
